@@ -1,12 +1,12 @@
 <h1>Spoon.ly</h1>
-<h2>come spoon with me!</h2>
+<h2>Come spoon with me!</h2>
 
-<div>
+<div class="main">
 	<ul>
-		<% @recipes.each do |i| %>
+		<% @recipes.each do |recipe| %>
 			<li>
 				<h3>
-					<%= link_to i.title, i %>
+					<%= link_to recipe.title, recipe %>
 				</h3>	
 			</li>
 		<% end %>

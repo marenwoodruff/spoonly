@@ -1,12 +1,25 @@
 <div class="newRecipe">
 	<h1>Post Your Recipe</h1>
-	<%= form_for @recipe do |recipe| %>
+	<%= form_for @recipe do |f| %>
+		<div class="field">
+			<%= f.text_field :title, :placeholder => "Enter Your Recipe Name" %>
+		</div>
 
-		<%= idea.text_field :title, :placeholder => "Enter Your Recipe Name" %>
-		<br />
-		<%= idea.text_field :category, :placeholder => "Enter the Category" %>
-		<br />
-		<%= idea.submit "submit" %>
+		<div class="field">
+			<%= f.text_field :author, :placeholder => "The Author" %>
+		</div>
+
+		<div class="field">
+			<%= f.text_field :category, :placeholder => "Category" %>
+		</div>
+
+		<div class="field">
+			<%= f.text_field :description, :placeholder => "Description" %>
+		</div>
+
+		<div class="actions">
+			<%= f.submit "submit" %>
+		</div>
 	<% end %>
 
 	<br />

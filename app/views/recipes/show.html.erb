@@ -1,5 +1,11 @@
 <p>
+	<strong>Title</strong>
 	<h1><%= @recipe.title %></h1>
+</p>
+
+<p>
+	<strong>Author</strong>
+	<%= @recipe.author %>
 </p>
 
 <p>
@@ -7,14 +13,11 @@
 	<%= @recipe.category %>
 </p>
 
-<p>
-	<strong>Description</strong>
-	<%= @recipe.blurb %>
-</p>
 
 <p>
-	<strong>Tags</strong>
-	<%= @recipe.tag %>
+	<strong>Description</strong>
+	<%= @recipe.description %>
 </p>
+
 
 <%= button_to 'X', @recipe, {method: "delete"} %>

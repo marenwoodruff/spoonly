@@ -3,7 +3,7 @@ Spoonly::Application.routes.draw do
   
   resources :users, only:[:new, :create]
   resources :auths, only:[:new, :create, :destroy]
-  resources :recipes, only:[:index, :new]
+  resources :recipes, only:[:index, :new, :show, :create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
