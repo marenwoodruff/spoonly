@@ -1,0 +1,14 @@
+<h1>Spoon.ly</h1>
+<h2>come spoon with me!</h2>
+
+<div>
+	<ul>
+		<% @recipes.each do |i| %>
+			<li>
+				<h3>
+					<%= link_to i.title, i %>
+				</h3>	
+			</li>
+		<% end %>
+	</ul>
+</div>

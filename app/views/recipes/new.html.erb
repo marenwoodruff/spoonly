@@ -1,0 +1,14 @@
+<div class="newRecipe">
+	<h1>Post Your Recipe</h1>
+	<%= form_for @recipe do |recipe| %>
+
+		<%= idea.text_field :title, :placeholder => "Enter Your Recipe Name" %>
+		<br />
+		<%= idea.text_field :category, :placeholder => "Enter the Category" %>
+		<br />
+		<%= idea.submit "submit" %>
+	<% end %>
+
+	<br />
+
+</div>

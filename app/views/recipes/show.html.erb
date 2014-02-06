@@ -1,0 +1,20 @@
+<p>
+	<h1><%= @recipe.title %></h1>
+</p>
+
+<p>
+	<strong>Category</strong>
+	<%= @recipe.category %>
+</p>
+
+<p>
+	<strong>Description</strong>
+	<%= @recipe.blurb %>
+</p>
+
+<p>
+	<strong>Tags</strong>
+	<%= @recipe.tag %>
+</p>
+
+<%= button_to 'X', @recipe, {method: "delete"} %>
