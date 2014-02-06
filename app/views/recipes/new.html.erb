@@ -1,5 +1,5 @@
 <div class="newRecipe">
-	<h1>Post Your Recipe</h1>
+	<h1>Post Your Modification</h1>
 	<%= form_for @recipe do |f| %>
 		<div class="field">
 			<%= f.text_field :title, :placeholder => "Enter Your Recipe Name" %>
@@ -14,7 +14,11 @@
 		</div>
 
 		<div class="field">
-			<%= f.text_field :description, :placeholder => "Description" %>
+			<%= f.text_area :description, :size => "60x12", :placeholder => "Description" %>
+		</div>
+
+		<div class="field">
+			<%= f.text_area :body, :size => "60x12", :placeholder => "Recipe Instructions" %>
 		</div>
 
 		<div class="actions">

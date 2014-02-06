@@ -1,9 +1,15 @@
 Spoonly::Application.routes.draw do
   root 'recipes#home'
   
-  resources :users, only:[:new, :create]
-  resources :auths, only:[:new, :create, :destroy]
   resources :recipes, only:[:index, :new, :show, :create, :destroy]
+
+  resources :users, only:[:new, :create]
+  resources :auths
+  # , only:[:new, :create, :destroy]
+
+  # get 'sign_in' => 'auths#new', as: 'login'
+  # delete 'sign_out' => 'auths#destroy', as: 'logout'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

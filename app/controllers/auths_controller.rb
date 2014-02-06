@@ -2,7 +2,7 @@ class AuthsController < ApplicationController
 	# Show a login form
 	def new
 		if current_user
-			redirect_to action: 'index'
+			redirect_to 'recipes#home'
 		else
 			# Make a login form from an object that has username and password
 			@user = User.new
@@ -16,7 +16,7 @@ class AuthsController < ApplicationController
 
 		if user.authenticated?(params[:user][:password])
 			session[:user_id] = user.id
-			redirect_to action: 'index'
+			redirect_to 'recipes#home'
 			# just like a hash, we can create a new key with each session
 		end
 	end
@@ -24,7 +24,7 @@ class AuthsController < ApplicationController
 	#Log out
 	def destroy
 		session[:user_id] = nil
-		redirect_to new_auths_path
+		redirect_to action 'recipes#home'
 	end
 end
 

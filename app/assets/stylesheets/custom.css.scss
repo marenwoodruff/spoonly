@@ -1,2 +1,16 @@
-@import "bootstrap";
+$navbar-default-bg: #312312;
+$light-orange: #ff8c00;
+$navbar-default-color: $light-orange;
 
+@import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Fascinate|Poller+One|Abril+Fatface);
+
+body {
+	font-family: 'Abril Fatface', cursive;
+}
+
+.img-thumbnail {
+	max-width: 1000px;
+	max-height: 550px;
+	margin: 0 auto;
+}

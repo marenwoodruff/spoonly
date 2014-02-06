@@ -4,6 +4,7 @@ class Recipe
   field :author, type: String
   field :date, type: Integer
   field :description, type: String
+  field :body, type: String
 
   belongs_to :category
   # belongs_to :user
