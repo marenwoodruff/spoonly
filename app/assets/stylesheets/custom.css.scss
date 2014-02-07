@@ -5,12 +5,22 @@ $navbar-default-color: $light-orange;
 @import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Fascinate|Poller+One|Abril+Fatface);
 
+
 body {
 	font-family: 'Abril Fatface', cursive;
+	background-color: white;
 }
 
 .img-thumbnail {
-	max-width: 1000px;
-	max-height: 550px;
+	max-width: 550px;
+	max-height: 480px;
 	margin: 0 auto;
+}
+#carousel {
+	background-color: white;
+}
+
+.btn { 
+	background-color: #009900;
+	color: white;
 }
