@@ -1,9 +1,14 @@
-<h1>Your Profile</h1>
+<h1>My Profile</h1>
 
-<h3>
+<h4>
 	<%= current_user ? current_user.username : "(logged in)" %> 
-</h3>
+</h4>
 
+<h3>My Recipes</h3>
+
+<br />
+<br />
+<br />
 <p>
 	<%= button_to "Log out", auths_path, method: :delete %>
 </p> 

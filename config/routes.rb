@@ -1,10 +1,8 @@
 Spoonly::Application.routes.draw do
   root 'recipes#home'
   
-  resources :recipes, only:[:index, :new, :show, :create, :delete]
-
+  resources :recipes
   resources :users
-  # , only:[:new, :create, :index]
   resources :auths
 
   delete "auths" => "auths#destroy"

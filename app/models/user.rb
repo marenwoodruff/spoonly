@@ -8,6 +8,8 @@ class User
   field :salt, type: String
   field :hashed_password, type: String
 
+  validates_length_of :password, minimum: 6, maximum: 12
+
   def authenticated? (pwd)
   	self.hashed_password ==
 	  	BCrypt::Engine.hash_secret(pwd, self.salt)
