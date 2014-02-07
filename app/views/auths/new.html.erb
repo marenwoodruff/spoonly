@@ -1,13 +1,13 @@
 <div class="login">
 	<h1>Log In</h1>
 
-	<%= form_for @user, {url:"/auths", method:"post"} do |user|%>
+	<%= form_for @user, {url:"/auths", method:"post"} do |u|%>
 
-		<%= user.text_field :username, :placeholder => "Enter your username" %>
+		<%= u.text_field :username, :placeholder => "Enter your username" %>
 		<br />
-		<%= user.password_field :password, :placeholder => "Enter your password" %>
+		<%= u.password_field :password, :placeholder => "Enter your password" %>
 		<br />
-		<%= user.submit "Log In" %>
+		<%= u.submit "Log In" %>
 
 	<%end%>
 </div>

@@ -28,7 +28,10 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-# gem 'better_errors'
+# get errors that are more understandable
+# group :development do
+#   gem "better_errors"
+# end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

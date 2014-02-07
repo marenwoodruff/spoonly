@@ -1,0 +1,6 @@
+<h1>Your Profile</h1>
+
+<h1><%= current_user ? current_user.username : "(logged in)" %> </h1>
+
+    <%= button_to "Log out", auths_path, method: :delete %>
+    
