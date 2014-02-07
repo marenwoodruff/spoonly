@@ -1,5 +1,5 @@
 <div class="newRecipe">
-	<h1>Post Your Modification</h1>
+	<h1>Post Your Recipe</h1>
 	<%= form_for @recipe do |f| %>
 		<div class="field">
 			<%= f.text_field :title, :placeholder => "Enter Your Recipe Name" %>
@@ -28,4 +28,6 @@
 
 	<br />
 
+	<%= link_to 'Back', recipes_path %>
+	
 </div>

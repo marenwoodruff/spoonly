@@ -1,17 +1,17 @@
-<p>
-	<h1><%= @recipe.title %></h1>
-</p>
+<h1><%= @recipe.title %></h1>
 
 <p>
-	<strong>Author</strong>
+	<strong>Recipe by:</strong>
 	<%= @recipe.author %>
 </p>
 
 <p>
-	<strong>Category</strong>
 	<%= @recipe.category %>
 </p>
 
+<!-- <p> -->
+	<%#= @recipe.photo %>
+<!-- </p> -->
 
 <p>
 	<strong>Description</strong>
@@ -28,4 +28,4 @@
 </p>
 
 
-<%= button_to 'X', @recipe, {method: "delete"} %>
+<%= button_to 'X', @recipe, method: :delete %>

@@ -1,0 +1,13 @@
+<div class="login">
+	<h1>Log In</h1>
+
+	<%= form_for @recipe, {url:"/recipes", method:"get"} do |u|%>
+
+		<%= u.text_field :username, :placeholder => "Email Address" %>
+		<br />
+		<%= u.password_field :password, :placeholder => "Password" %>
+		<br />
+		<%= u.submit "Log In" %>
+
+	<%end%>
+</div>

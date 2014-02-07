@@ -8,7 +8,7 @@
 
 Recipe.destroy_all
 
-Recipe.create(title:"Mexican Hot Chocolate", author: "Martha Hopkins and Randall Lockridge")
+Recipe.create(title:"Mexican Hot Chocolate", author: "Martha Hopkins and Randall Lockridge" )
 Recipe.create(title:"Homemade Whipped Cream", author: "Maren Woodruff")
 Recipe.create(title:"Strawberries Drenched in Honeyed Cream", author: "Martha Hopkins and Randall Lockridge")
 Recipe.create(title:"Salted Caramel Brownies", author: "adapted from Smitten Kittchen")
