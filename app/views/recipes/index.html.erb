@@ -1,5 +1,7 @@
-<h1>Spoon.ly</h1>
-<h2>Come spoon with me!</h2>
+<%= render partial: '/layouts/navbar' %>
+
+<h2>Spoon.ly</h2>
+<h3>Come spoon with me!</h3>
 
 <div class="main">
 	<ul>
@@ -13,5 +15,7 @@
 	</ul>
 </div>
 <br />
+<br />
+<%= link_to 'Profile', users_path %>
 <br />
 <%= link_to 'Create A New Recipe', new_recipe_path %>

@@ -11,4 +11,7 @@ class ApplicationController < ActionController::Base
   	end
   end
 
+  def authenticate_user
+  	redirect_to authentication_url unless current_user
+  end
 end

@@ -1,14 +1,17 @@
-<h1>My Profile</h1>
+<%= render partial: '/layouts/navbar' %>
+<h1>My List</h1>
 
 <h4>
 	<%= current_user ? current_user.username : "(logged in)" %> 
 </h4>
 
 <h3>My Recipes</h3>
-
+<br />
+<%= link_to 'Recipe Page', recipes_path %>
+<br />
 <br />
 <br />
 <br />
 <p>
-	<%= button_to "Log out", auths_path, method: :delete %>
+	<%= button_to "Log out", auths_path, method: :delete, class: 'logOutBtn' %>
 </p> 

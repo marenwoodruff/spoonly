@@ -1,3 +1,4 @@
+<%= render partial: '/layouts/navbar' %>
 <div class="newRecipe">
 	<h1>Post Your Recipe</h1>
 	<%= form_for @recipe do |f| %>
@@ -28,6 +29,6 @@
 
 	<br />
 
-	<%= link_to 'Back', recipes_path %>
+	<%= link_to 'Back', recipes_path, class: 'backToRecipes' %>
 	
 </div>
