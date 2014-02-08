@@ -25,3 +25,21 @@ body {
 	background-color: #33FF33;
 	color: white;
 }
+
+#logIn {
+	bottom: 35px;
+	left: 330px;
+	position: absolute;
+}
+
+#makeUser {
+	bottom: 35px;
+	left: 397px;
+	position: absolute;
+	background-color: #CC0066;
+}
+
+#makeUser:hover {
+	background-color: #FF007F;
+}
+

@@ -1,8 +1,9 @@
-<%= render partial: '/layouts/navbar' %>
+<%= render partial: 'layouts/navbar' %>
 
 <h2>Spoon.ly</h2>
 <h3>Come spoon with me!</h3>
 
+</div><br>
 <div class="main">
 	<ul>
 		<% @recipes.each do |recipe| %>
@@ -19,3 +20,4 @@
 <%= link_to 'Profile', users_path %>
 <br />
 <%= link_to 'Create A New Recipe', new_recipe_path %>
+<br />

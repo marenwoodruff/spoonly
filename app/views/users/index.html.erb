@@ -5,13 +5,14 @@
 	<%= current_user ? current_user.username : "(logged in)" %> 
 </h4>
 
-<h3>My Recipes</h3>
-<br />
-<%= link_to 'Recipe Page', recipes_path %>
+<h3><u>My Recipes</u></h3>
 <br />
 <br />
 <br />
 <br />
+<%= link_to 'Go to Recipe Page', recipes_path %>
+<br />
+
 <p>
 	<%= button_to "Log out", auths_path, method: :delete, class: 'logOutBtn' %>
 </p> 

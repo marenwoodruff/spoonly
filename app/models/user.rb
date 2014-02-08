@@ -2,7 +2,7 @@ require 'bcrypt'
 
 class User
   include Mongoid::Document
-  attr_accessor :password
+  attr_accessor  :password
 
   field :username, type: String
   field :salt, type: String
@@ -19,7 +19,6 @@ class User
   # this line will run right before the new user is saved
   before_save :hash_stuff
   
-
 
 private
 	def hash_stuff

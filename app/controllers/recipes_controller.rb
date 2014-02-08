@@ -1,6 +1,18 @@
 class RecipesController < ApplicationController
+	before_action :set_recipe, only: [:show, :edit, :update, :destroy]
+
 	def index
-		@recipes = Recipe.all
+		if params[:cook] == nil
+			@recipes = Recipe.all
+		elsif params[:cook] == "comfortFood"
+			@recipes = Category.find_by(name: "Comfort Food").recipes
+		elsif params[:cook] == "grazing"
+			@recipes = Category.find_by(name: "Grazing").recipes
+		elsif params[:cook] == "desserts"
+			@recipes = Category.find_by(name: "Desserts").recipes
+		end
+
+		@cook = params[:cook]
 	end
 
 	def new
@@ -21,6 +33,20 @@ class RecipesController < ApplicationController
 		end
 	end
 
+	def edit
+		@recipe = Recipe.find(params[:id])
+	end
+
+	def update
+		if @recipe.update(recipe_params)
+			session[:recipe_id] = @recipe.id
+			redirect_to action: 'index'
+			flash[:notice] = "Your recipe was successfully updated."
+		else
+			render action: 'edit'
+			flash[:notice] = "Your profile was not able to be updated, please make sure to fill out all of the forms."
+		end
+	end
 
 	def destroy
 		@recipe = Recipe.find(params[:id])
@@ -34,7 +60,7 @@ private
 	end
 
 	def recipe_params
-		params.require(:recipe).permit(:title, :author)
+		params.require(:recipe).permit(:title, :author, :category, :description, :body)
 	end
 
 end

@@ -1,13 +1,13 @@
-<%= render partial: 'layouts/navbar' %>
-<div class="newRecipe">
-	<h1>Post Your Recipe</h1>
+<%= render partial: '/layouts/navbar' %>
+<div class="editRecipe">
+	<h1>Edit Your Recipe</h1>
 	<%= form_for @recipe do |f| %>
 		<div class="field">
 			<%= f.text_field :title, :placeholder => "Recipe Name" %>
 		</div>
 
 		<div class="field">
-			<%= f.text_field :author, :placeholder => "Author" %>
+			<%= f.text_field :author, :placeholder => "Recipe By" %>
 		</div>
 
 		<div class="field">

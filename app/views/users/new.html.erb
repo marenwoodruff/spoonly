@@ -2,7 +2,9 @@
     <h1>Create your User Profile</h1>
     <%=form_for @user do |f|%>
         	<%=f.text_field :username, :placeholder => "Enter your username"%>
+        	<br />
         	<%=f.password_field :password, :placeholder => "Enter password, 6+" %>
+        	<br />
         	<%= f.submit "Create A New User" %>
     <% end %>
     <%= link_to 'Home', root_path %>

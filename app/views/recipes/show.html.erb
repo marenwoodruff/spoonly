@@ -1,4 +1,4 @@
-<%= render partial: '/layouts/navbar' %>
+<%= render partial: 'layouts/navbar' %>
 <h1><%= @recipe.title %></h1>
 
 <p>
@@ -15,7 +15,8 @@
 <!-- </p> -->
 
 <p>
-	<strong>Description</strong>
+	<strong><u>Description</u></strong>
+	<br />
 	<%= @recipe.description %>
 </p>
 
@@ -24,7 +25,8 @@
 </p>
 
 <p>
-	<strong>Recipe Instructions</strong>
+	<strong><u>Recipe Instructions</u></strong>
+	<br />
 	<%= @recipe.body %>
 </p>
 <br />
@@ -33,7 +35,7 @@
 	<%= link_to 'Add to My List', users_path %>
 		<br />
 	<%= link_to 'Back', recipes_path, class: 'backToRecipes' %>
-	
-	
-	<%= button_to 'X', @recipe, method: :delete %>
+		<br />
+	<%= link_to 'Edit', edit_recipe_path(@recipe) %>
+	<%= button_to 'Delete', @recipe, method: :delete %>
 </div>
