@@ -4,6 +4,7 @@ class Recipe
   field :author, type: String
   field :category, type:String
   field :description, type: String
+  field :ingredient, type: String
   field :body, type: String
   # has_attached_file :photo, :styles => { :small => "150x150>" },
   #                   :url  => "/assets/products/:id/:style/:basename.:extension",
@@ -16,6 +17,7 @@ class Recipe
   # validates :author, presence: true
   # validates :category, presence: true
   # validates :description, presence: true
+  # validates :ingredients, presence: true
   # validates :body, presence: true
   
 end

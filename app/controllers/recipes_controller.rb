@@ -44,7 +44,7 @@ class RecipesController < ApplicationController
 			flash[:notice] = "Your recipe was successfully updated."
 		else
 			render action: 'edit'
-			flash[:notice] = "Your profile was not able to be updated, please make sure to fill out all of the forms."
+			flash[:notice] = "Your recipe was not able to be updated, please make sure to fill out all of the forms."
 		end
 	end
 
@@ -60,7 +60,7 @@ private
 	end
 
 	def recipe_params
-		params.require(:recipe).permit(:title, :author, :category, :description, :body)
+		params.require(:recipe).permit(:title, :author, :category, :description, :ingredient, :body)
 	end
 
 end

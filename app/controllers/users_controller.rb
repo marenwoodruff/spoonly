@@ -31,12 +31,13 @@ class UsersController < ApplicationController
 	end
 
 	def update
-		if @user.update(user_params)
-			#session[:user_id] = @user.id
-			redirect_to action: 'index'
+		@user = User.find(params[:id])
+
+		if @user.update_attributes(params[:user].permit(:username, :password, :email))
+			redirect_to @user
 			flash[:notice] = "Your profile was successfully updated."
 		else
-			render action: 'edit'
+			render 'edit'
 			flash[:notice] = "Your profile was not able to be updated, please make sure to fill out all of the forms."
 		end
 	end
