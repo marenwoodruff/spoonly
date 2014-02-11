@@ -2,7 +2,7 @@ class PictureController < ApplicationController
 	include Mongoid::Document
 	include Mongoid::Paperclip
 
-	embedded_in :user, :inverse_of => :pictures
+	#embedded_in :user, :inverse_of => :pictures
 
 
 
@@ -19,6 +19,6 @@ class PictureController < ApplicationController
     :convert options => { :all => '-background white -flatten +matte' }
 end
 
-@user.pictures.each do |picture|
+#@user.pictures.each do |picture|
   <%= picture.attachment.url %>
 end

@@ -10,11 +10,13 @@ class RecipesController < ApplicationController
 		
 		elsif params[:cook] == "grazing"
 			@recipes = Recipe.where(category: "Grazing")
+
+		elsif params[:cook] == "vegetarian"
+			@recipes = Recipe.where(category: "Vegetarian")
 		
 		else params[:cook] == "desserts"
 			@recipes = Recipe.where(category: "Desserts")
 		 
-
 		end
 
 		@cook = params[:cook]
@@ -30,8 +32,9 @@ class RecipesController < ApplicationController
 
 	def create
 		@recipe = Recipe.new(recipe_params)
+
 		if @recipe.save
-			redirect_to action: 'index'
+			redirect_to recipes_path
 			flash[:notice] = "Recipe created!"
 		else
 			render action: 'new'
@@ -44,9 +47,9 @@ class RecipesController < ApplicationController
 
 	def update
 		@recipe = Recipe.find(params[:id])
+		
 		if @recipe.update(recipe_params)
-			# session[:recipe_id] = @recipe.id
-			redirect_to action: 'index'
+			redirect_to recipes_path
 			flash[:notice] = "Your recipe was successfully updated."
 		else
 			render action: 'edit'

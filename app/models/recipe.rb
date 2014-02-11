@@ -1,6 +1,6 @@
 class Recipe
   include Mongoid::Document
-  embeds_many :pictures 
+  #embeds_many :pictures 
 
   field :title, type: String
   field :author, type: String
@@ -18,7 +18,7 @@ class Recipe
   validates :author, presence: true
   validates :category, presence: true
   validates :description, presence: true
-  validates :ingredients, presence: true
+  validates :ingredient, presence: true
   validates :body, presence: true
   
 end

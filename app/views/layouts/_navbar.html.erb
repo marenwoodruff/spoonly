@@ -28,6 +28,7 @@
             <li><%= link_to "All", recipes_path %></li>
             <li><%= link_to "Comfort Food", recipes_path(cook: "comfortFood") %></li>
             <li><%= link_to "Grazing", recipes_path(cook: "grazing") %></li>
+            <li><%= link_to "Vegetarian", recipes_path(cook: "vegetarian") %></li>
             <li><%= link_to "Desserts", recipes_path(cook: "desserts") %></li>
             <li class="divider"></li>
             <li><a href="#">One more separated link</a></li>
@@ -48,7 +49,7 @@
             <li><%= link_to 'My List', users_path %></li>
             <li><%= link_to 'Edit', edit_user_path(:@user) %></li>
             <li><%= link_to 'Log out', new_auth_path, method: 'delete' %></li>
-            <li class="divider"></li>
+            <li> class="divider"></li>
             <li><%= link_to 'Delete your account?', new_user_path, method: 'delete', data: {confirm: 'Are you sure?'} %></li>
           </ul>
         </li>
