@@ -7,7 +7,7 @@
 </p>
 
 <p>
-	<%= @recipe.category %>
+	<h5><%= @recipe.category %></h5>
 </p>
 
 <!-- <p> -->
@@ -16,7 +16,6 @@
 
 <p>
 	<strong><h4>Description: </h4></strong>
-	<br />
 	<%= @recipe.description %>
 </p>
 
@@ -25,22 +24,23 @@
 </p>
 
 <p>
-	<strong><h4>Recipe Instructions</h4></strong>
+	<strong><h4>Recipe Instructions: </h4></strong>
 	<br />
 	<%= @recipe.ingredient %>
+	<br />
 </p>
 
 <p>
-	<br />
 	<%= @recipe.body %>
 </p>
 <br />
 <br />
 <div>
+	<%= link_to 'Edit', edit_recipe_path(@recipe) %>
+		<br />
 	<%= link_to 'Add to My List', users_path %>
 		<br />
 	<%= link_to 'Back', recipes_path, class: 'backToRecipes' %>
 		<br />
-	<%= link_to 'Edit', edit_recipe_path(@recipe) %>
-	<%= button_to 'Delete', @recipe, method: :delete %>
+	<%#= button_to 'Delete', @recipe, method: :delete %>
 </div>

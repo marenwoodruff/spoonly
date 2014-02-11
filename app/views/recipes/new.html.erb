@@ -1,38 +1,6 @@
 <%= render partial: 'layouts/navbar' %>
-<div class="newRecipe">
 	<h1>Post Your Recipe</h1>
-	<%= form_for @recipe do |f| %>
-		<div class="field">
-			<%= f.text_field :title, :placeholder => "Recipe Name" %>
-		</div>
-
-		<div class="field">
-			<%= f.text_field :author, :placeholder => "Author" %>
-		</div>
-
-		<div class="field">
-			<%= f.text_field :category, :placeholder => "Category" %>
-		</div>
-
-		<div class="field">
-			<%= f.text_area :description, :size => "60x12", :placeholder => "Description" %>
-		</div>
-
-		<div class="field">
-			<%= f.text_area :ingredient, :size => "60x12", :placeholder => "Ingredient" %>
-		</div>
-
-		<div class="field">
-			<%= f.text_area :body, :size => "60x12", :placeholder => "Recipe Instructions" %>
-		</div>
-
-		<div class="actions">
-			<%= f.submit "submit" %>
-		</div>
-	<% end %>
-
+	<%= render partial: 'layouts/form1' %>
 	<br />
 
 	<%= link_to 'Back', recipes_path, class: 'backToRecipes' %>
-	
-</div>

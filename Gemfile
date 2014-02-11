@@ -4,6 +4,12 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'rails_12factor'
+gem 'figaro'
+
+gem 'mongoid-paperclip-google', github: 'danieljacobarcher/mongoid-paperclip', require: 'mongoid_paperclip'
+gem 'paperclip'
+gem 'fog'
+
 
 gem 'thin'
 # Use SCSS for stylesheets

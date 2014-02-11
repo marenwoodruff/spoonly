@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# Recipe.destroy_all
+Recipe.destroy_all
 
 Recipe.create({title:"Mexican Hot Chocolate", author: "Martha Hopkins and Randall Lockridge", category: "Desserts", description: "Really delicious.  Add booze.", ingredient: "Yes!", body: "Yes!"})
 Recipe.create({title:"Homemade Whipped Cream", author: "Maren Woodruff", category: "Desserts", description: "So much better than the store bought kind.", ingredient: "Yes!", body: "Yes!"})

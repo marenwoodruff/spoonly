@@ -33,13 +33,20 @@ class UsersController < ApplicationController
 	def update
 		@user = User.find(params[:id])
 
-		if @user.update_attributes(params[:user].permit(:username, :password, :email))
+		if @user.update_attributes(params[:user].permit(:username, :email, :password))
+			session[:user_id] = @user.id
 			redirect_to @user
 			flash[:notice] = "Your profile was successfully updated."
 		else
-			render 'edit'
-			flash[:notice] = "Your profile was not able to be updated, please make sure to fill out all of the forms."
+			render action: 'edit'
+			flash[:notice] = "Your profile was not able to be updated, please make sure to fill out all of the fields."
 		end
+	end
+
+	def destroy
+		@user = User.find(params[:id])
+		@user.destroy
+		redirect_to user_url
 	end
 
 private
@@ -48,7 +55,7 @@ private
 	end
 	
 	def user_params
-		params.require(:user).permit(:username, :password, :email)
+		params.require(:user).permit(:username, :email, :password)
 	end
 
 end

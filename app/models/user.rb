@@ -5,10 +5,16 @@ class User
   attr_accessor  :password
 
   field :username, type: String
+  field :email, type: String
   field :salt, type: String
   field :hashed_password, type: String
 
-  validates_length_of :password, minimum: 6, maximum: 12
+  validates :username, presence: true, length: { maximum: 50 }
+  validates :email, presence: true, 
+                    uniqueness: true
+
+  validates_length_of :password, minimum: 6, maximum: 12 
+
 
   def authenticated? (pwd)
   	self.hashed_password ==

@@ -1,0 +1,40 @@
+<div class="newRecipe">
+	<%= form_for @recipe do |f| %>
+		<div class="field">
+			<%= f.text_field :title, :placeholder => "Recipe Name" %>
+		</div>
+
+		<div class="field">
+			<%= f.text_field :author, :placeholder => "Recipe By" %>
+		</div>
+
+		<!-- <div class="field">
+			<%#= f.text_field :category, :placeholder => "Category" %>
+		</div>  -->
+		
+		<%#= f.collection_select(:category_id, Category.all, :id :name %>
+
+
+
+		 <%= options_for_select [["Comfort Food", "comfortFood"], ["Grazing", "grazing"], ["Desserts", "desserts"]]) %>
+		
+
+		<div class="field">
+			<%= f.text_area :description, :size => "60x12", :placeholder => "Description" %>
+		</div>
+
+
+
+		<div class="field">
+			<%= f.text_area :ingredient, :size => "60x12", :placeholder => "Ingredients" %>
+		</div>
+
+		<div class="field">
+			<%= f.text_area :body, :size => "60x12", :placeholder => "Recipe Instructions" %>
+		</div>
+
+		<div class="actions">
+			<%= f.submit "submit" %>
+		</div>
+	<% end %>
+</div>

@@ -1,9 +1,15 @@
 <div class="createUser" id="newUser">
     <h1>Create your User Profile</h1>
+    <br />
+    <br />
     <%=form_for @user do |f|%>
         	<%=f.text_field :username, :placeholder => "Enter your username"%>
         	<br />
+        	<%= f.text_field :email, :placeholder =>"Email address" %>
+        	<br />
         	<%=f.password_field :password, :placeholder => "Enter password, 6+" %>
+        	<br />
+        	<%#= f.password_field :password_confirmation, :placeholder => "Password Confirmation" %>
         	<br />
         	<%= f.submit "Create A New User" %>
     <% end %>

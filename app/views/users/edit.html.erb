@@ -1,0 +1,16 @@
+<div class="editUser" id="editUser">
+    <h1>Edit your Profile</h1>
+    <br />
+    <br />
+    <%=form_for @user do |f|%>
+        <%=f.text_field :username, :placeholder => "Enter your username"%>
+        	<br />
+        <%= f.text_field :email, :placeholder =>"Email address" %>
+        	<br />
+        <%=f.password_field :password, :placeholder => "Enter password, 6+" %>
+        	<br />
+        	<br />
+        	<%= f.submit "Edit your Account" %>
+    <% end %>
+    <%= link_to 'Home', root_path %>
+</div>

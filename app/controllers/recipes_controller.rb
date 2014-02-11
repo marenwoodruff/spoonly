@@ -4,12 +4,17 @@ class RecipesController < ApplicationController
 	def index
 		if params[:cook] == nil
 			@recipes = Recipe.all
+
 		elsif params[:cook] == "comfortFood"
-			@recipes = Category.find_by(name: "Comfort Food").recipes
+			@recipes = Recipe.where(category: "Comfort Food")
+		
 		elsif params[:cook] == "grazing"
-			@recipes = Category.find_by(name: "Grazing").recipes
-		elsif params[:cook] == "desserts"
-			@recipes = Category.find_by(name: "Desserts").recipes
+			@recipes = Recipe.where(category: "Grazing")
+		
+		else params[:cook] == "desserts"
+			@recipes = Recipe.where(category: "Desserts")
+		 
+
 		end
 
 		@cook = params[:cook]
@@ -38,8 +43,9 @@ class RecipesController < ApplicationController
 	end
 
 	def update
+		@recipe = Recipe.find(params[:id])
 		if @recipe.update(recipe_params)
-			session[:recipe_id] = @recipe.id
+			# session[:recipe_id] = @recipe.id
 			redirect_to action: 'index'
 			flash[:notice] = "Your recipe was successfully updated."
 		else
