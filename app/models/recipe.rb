@@ -1,6 +1,9 @@
 class Recipe
   include Mongoid::Document
+  #extend Dragonfly::Mode
   #embeds_many :pictures 
+  # act_as_solr :fields => [:title, :author, :category, :ingredient],
+                # :facets => [:author]
 
   field :title, type: String
   field :author, type: String

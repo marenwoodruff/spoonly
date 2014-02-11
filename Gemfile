@@ -9,7 +9,10 @@ gem 'figaro'
 gem 'mongoid-paperclip-google', github: 'danieljacobarcher/mongoid-paperclip', require: 'mongoid_paperclip'
 gem 'paperclip'
 gem 'fog'
+gem 'dragonfly', '~> 1.0.3'
 
+gem 'sunspot_rails'
+gem 'sunspot_solr'
 
 gem 'thin'
 # Use SCSS for stylesheets

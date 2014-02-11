@@ -5,6 +5,11 @@
 body {
 	font-family: 'Abril Fatface', cursive;
 	background-color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
 }
 
 .img-thumbnail {
@@ -41,5 +46,16 @@ body {
 
 #makeUser:hover {
 	background-color: #FF007F;
+}
+
+/* show recipe */
+
+.ingredients {
+	position: absolute;
+	margin: 0 auto;
+}
+
+.instructions {
+	position: absolute;
 }
 

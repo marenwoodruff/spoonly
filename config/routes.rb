@@ -1,6 +1,7 @@
 Spoonly::Application.routes.draw do
   root 'recipes#home'
   
+  get 'users/:id/edit' => 'users#edit', :as => :edit_user
   resources :recipes
   resources :users
   resources :auths

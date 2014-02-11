@@ -9,6 +9,10 @@ class UsersController < ApplicationController
 		@user = User.new
   	end
 
+  	def show
+		@user = User.find(params[:id])
+	end
+
   	def create
   		if (User.where(username: params[:user][:username]).empty?)
 	    	@user = User.new(user_params)

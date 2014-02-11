@@ -1,38 +1,45 @@
 <%= render partial: 'layouts/navbar' %>
-<h1><%= @recipe.title %></h1>
+<div class="container">
+	<h1><%= @recipe.title %></h1>
 
-<p>
-	<strong>Recipe by:</strong>
-	<%= @recipe.author %>
-</p>
+	<p>
+		<strong>Recipe by:</strong>
+		<%= @recipe.author %>
+	</p>
 
-<p>
-	<h5><%= @recipe.category %></h5>
-</p>
+	<p>
+		<h5><%= @recipe.category %></h5>
+	</p>
 
-<!-- <p> -->
-	<%#= @recipe.photo %>
-<!-- </p> -->
+	<!-- <p> -->
+		<%#= @recipe.photo %>
+	<!-- </p> -->
 
-<p>
-	<strong><h4>Description: </h4></strong>
-	<%= @recipe.description %>
-</p>
+	<p>
+		<strong><h4>Description: </h4></strong>
+		<%= @recipe.description %>
+	</p>
 
-<p>
-	<h3><%= @recipe.title %></h3>
-</p>
+	<p>
+		<h3><%= @recipe.title %></h3>
+	</p>
 
-<p>
-	<strong><h4>Recipe Instructions: </h4></strong>
-	<br />
-	<%= @recipe.ingredient %>
-	<br />
-</p>
+	<div class="col-xs-12  col-sm-6 col-md-4" id="ingedients">
+		<strong><h4>Recipe Ingredients: </h4></strong>
+		<br />
+		<%= @recipe.ingredient %>
+		<br />
+	</div>
 
-<p>
-	<%= @recipe.body %>
-</p>
+		<br />
+		<br />
+	<div class="col-md-8" id="instructions">
+		<p>
+			<strong><h4>Recipe Instructions: </h4></strong>
+			<%= @recipe.body %>
+		</p>
+	</div>
+</div>
 <br />
 <br />
 <div>
