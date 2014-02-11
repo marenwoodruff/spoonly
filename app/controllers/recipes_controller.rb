@@ -11,8 +11,8 @@ class RecipesController < ApplicationController
 		elsif params[:cook] == "grazing"
 			@recipes = Recipe.where(category: "Grazing")
 
-		elsif params[:cook] == "vegetarian"
-			@recipes = Recipe.where(category: "Vegetarian")
+		elsif params[:cook] == "salads"
+			@recipes = Recipe.where(category: "Salads")
 		
 		else params[:cook] == "desserts"
 			@recipes = Recipe.where(category: "Desserts")
