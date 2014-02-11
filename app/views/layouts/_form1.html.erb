@@ -11,12 +11,15 @@
 		<!-- <div class="field">
 			<%#= f.text_field :category, :placeholder => "Category" %>
 		</div>  -->
-		
-		<%#= f.collection_select(:category_id, Category.all, :id :name %>
+		<div class="categoryDropdown">
+			<%#= f.select("Recipe", "category", Recipe::CATEGORIES, {:include_blank => true}) %>
+			<%#= f.collection_select :category_id, Category.order(:name), :id, :name, include_blank: true) %>
+			<%= f.select :category, options_for_select(['Category', 'Comfort Food', 'Grazing', 'Desserts']) %>
+		</div>
 
 
 
-		 <%= options_for_select [["Comfort Food", "comfortFood"], ["Grazing", "grazing"], ["Desserts", "desserts"]]) %>
+		 <%#= f.select, options_for_select [["Comfort Food", "comfortFood"], ["Grazing", "grazing"], ["Desserts", "desserts"]]) %>
 		
 
 		<div class="field">
