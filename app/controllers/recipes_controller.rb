@@ -14,12 +14,17 @@ class RecipesController < ApplicationController
 		elsif params[:cook] == "salads"
 			@recipes = Recipe.where(category: "Salads")
 		
-		else params[:cook] == "desserts"
+		elsif params[:cook] == "desserts"
 			@recipes = Recipe.where(category: "Desserts")
 		 
-		end
+		else @search = Recipe.search do
+			keyword params[:query]
 
+		end
+		@recipes = @search.results
+	end	
 		@cook = params[:cook]
+		
 	end
 
 	def new
@@ -58,9 +63,6 @@ class RecipesController < ApplicationController
 	end
 
 	def destroy
-		# if current_user
-		# 	@recipe = current_user.recipes.find(params[:id]).destroy
-		# end
 		@recipe = Recipe.find(params[:id])
 		@recipe.destroy
 		redirect_to action: 'index'
@@ -72,7 +74,7 @@ private
 	end
 
 	def recipe_params
-		params.require(:recipe).permit(:title, :author, :category, :description, :ingredient, :body)
+		params.require(:recipe).permit(:title, :author, :category, :description, :image, :ingredient, :body)
 	end
 
 end

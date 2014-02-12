@@ -15,5 +15,7 @@
 /log/*.log
 /tmp
 
+solr/data
+
 # Ignore application configuration
 /config/application.yml

@@ -11,13 +11,13 @@
 		<h5><%= @recipe.category %></h5>
 	</p>
 
-	<!-- <p> -->
-		<%#= @recipe.photo %>
-	<!-- </p> -->
-
 	<p>
 		<strong><h4>Description: </h4></strong>
 		<%= @recipe.description %>
+	</p>
+
+	<p>
+		<%= image_tag @recipe.image(:medium) %>
 	</p>
 
 	<p>
@@ -26,12 +26,10 @@
 
 	<div id="ingredients">
 		<strong><h4>Recipe Ingredients: </h4></strong>
-		<br />
 		<%= @recipe.ingredient %>
 		<br />
 	</div>
 
-		<br />
 		<br />
 	<div id="instructions">
 		<p>

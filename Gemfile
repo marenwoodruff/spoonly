@@ -6,10 +6,11 @@ gem 'mongoid', github: 'mongoid/mongoid'
 gem 'rails_12factor'
 gem 'figaro'
 
-gem 'mongoid-paperclip-google', github: 'danieljacobarcher/mongoid-paperclip', require: 'mongoid_paperclip'
-gem 'paperclip'
-gem 'fog'
-gem 'dragonfly', '~> 1.0.3'
+gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
+#gem 'fog'
+#gem 'dragonfly', '~> 1.0.3'
+#gem 'aws-sdk'
+
 
 gem 'sunspot_rails'
 gem 'sunspot_solr'
