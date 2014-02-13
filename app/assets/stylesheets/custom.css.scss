@@ -13,10 +13,8 @@ a:hover {
 }
 
 .img-thumbnail {
-	max-width: 550px;
-	max-height: 480px;
 	margin: 0 auto;
-	
+	height: 550px;
 }
 
 #carousel {
@@ -39,15 +37,10 @@ a:hover {
 	position: absolute;
 }
 
-#makeUser {
-	bottom: 35px;
-	left: 397px;
-	position: absolute;
-	background-color: #CC0066;
-}
-
-#makeUser:hover {
-	background-color: #FF007F;
+.img-file {
+	margin: 0 auto;
+	text-align: center;
+	left: 400px;
 }
 
 /* show recipe */

@@ -8,34 +8,13 @@
         	<%=u.password_field :password, :class => "form-control", :placeholder => "Enter password, 6+" %>
 
         	<br />
-        	<div>
+        	<div class="logIn">
 	  			<%= u.submit 'Log in', class: 'btn btn-primary'%>
 	  			
 	  			<%= link_to 'Create a new User', new_user_path(@recipe) %>
 	 		 </div>
     <% end %>
 </div>
-
-<!-- <form class="form-inline" role="form">
-	  <div class="form-group"> 
-    	<label class="sr-only" for="username">Enter Username</label>
-	    <input type="string" class="form-control" placeholder="Enter Username">
-	  </div>
-	  <div class="form-group"> 
-    	<label class="sr-only" for="exampleInputEmail2">Enter Email</label>
-	    <input type="string" class="form-control" placeholder="Enter Email">
-	  </div>
-	  <div class="form-group">
-	    <label class="sr-only" for="exampleInputPassword2">Password</label>
-	    <input type="password" class="form-control" placeholder="Password">
-	  </div>
-	  <div>
-	  	<%#= button_to 'Log in', users_path, method: :get, class: 'btn btn-primary', id: 'logIn' %>
-
-	  	<%#= button_to 'New User', new_user_path, method: :get, class: 'btn btn-default', id: 'makeUser' %>
-	  </div>
-	
-</form> -->
 
 
 
