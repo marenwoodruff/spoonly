@@ -1,11 +1,6 @@
 class Recipe
   include Mongoid::Document
   include Mongoid::Paperclip
-  # searchable do
-  #   text :title, :boost => 2.0
-  #   text :author
-  # end
-
 
   field :title, type: String
   field :author, type: String
@@ -34,7 +29,6 @@ class Recipe
   #belongs_to :category
   # has_many :ingredients
   # belongs_to :user
-  # convert_options { all: '-background white -flatten +matte' 
 
   validates :title, presence: true
   validates :author, presence: true
@@ -45,7 +39,5 @@ class Recipe
   validates_attachment_content_type :image,
    :content_type => /\Aimage\/.*\Z/
   
-  #string  :sort_title do
-    #title.downcase.gsub(/^(an?|the)/, '')
-  #end
+  
 end

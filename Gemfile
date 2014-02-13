@@ -7,7 +7,7 @@ gem 'rails_12factor'
 gem 'figaro'
 
 gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
-#gem 'fog'
+gem 'fog'
 #gem 'dragonfly', '~> 1.0.3'
 #gem 'aws-sdk'
 
