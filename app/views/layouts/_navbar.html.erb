@@ -36,8 +36,7 @@
         <div class="form-group">
           <%= render :partial => 'layouts/search' %>
         </div>
-        <!-- <button type="submit" class="btn btn-default">Submit</button> -->
-        <%= link_to 'Submit', @recipe, :class =>"btn btn-default" %>
+        <%= link_to 'Submit', recipes_path, method: 'get', :class =>"btn btn-default" %>
       </form>
       <ul class="nav navbar-nav navbar-right">
         <!-- <li><a href="#">My List</a></li> -->
