@@ -21,13 +21,13 @@ class RecipesController < ApplicationController
 			@recipes = Recipe.where(category: "Desserts")
 		 
 		end
+		
 		@cook = params[:cook]
-		end
+
 	end
 
 	def new
-		if current_user
-			@recipe = current_user.recipes.new
+			@recipe = Recipe.new
 	end
 
 	def show
@@ -67,7 +67,7 @@ class RecipesController < ApplicationController
 		redirect_to action: 'index'
 	end
 
-  private
+ private
 	def set_recipe
 		@recipe = Recipe.find(params[:id])
 	end
@@ -75,5 +75,4 @@ class RecipesController < ApplicationController
 	def recipe_params
 		params.require(:recipe).permit(:title, :author, :category, :description, :image, :ingredient, :body)
 	end
-
 end
