@@ -62,12 +62,12 @@ class RecipesController < ApplicationController
 	end
 
 	def destroy
-			@recipe = Recipe.find(params[:id])
-			@recipe.destroy
-			redirect_to action: 'index'
+		@recipe = Recipe.find(params[:id])
+		@recipe.destroy
+		redirect_to action: 'index'
 	end
 
-private
+  private
 	def set_recipe
 		@recipe = Recipe.find(params[:id])
 	end

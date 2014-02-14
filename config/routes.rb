@@ -6,7 +6,7 @@ Spoonly::Application.routes.draw do
   resources :recipes
   resources :users
   resources :auths
-  resources :menus
+  #resources :menus
 
   delete "auths" => "auths#destroy"
   # get 'sign_in' => 'auths#new', as: 'login'
