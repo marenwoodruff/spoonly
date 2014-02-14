@@ -52,6 +52,10 @@ class RecipesController < ApplicationController
 	def update
 		@recipe = Recipe.find(params[:id])
 		
+		if params[:recipe][:image]
+			@recipe.update_attributes(image: params[:recipe][:image])
+		end
+		
 		if @recipe.update(recipe_params)
 			redirect_to recipes_path
 			flash[:notice] = "Your recipe was successfully updated."
