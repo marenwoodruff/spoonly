@@ -26,10 +26,6 @@ class Recipe
       :medium => "250x250#"   # Only squish if it's larger than this
     }  
 
-  #belongs_to :category
-  # has_many :ingredients
-  # belongs_to :user
-
   validates :title, presence: true
   validates :author, presence: true
   validates :category, presence: true

@@ -19,6 +19,7 @@ class AuthsController < ApplicationController
 				redirect_to recipes_path
 				# just like a hash, we can create a new key with each session
 			else
+				flash.now[:error] = "Try again.  Make sure to enter all of the fields.  Your password also needs to be more than 6 characters."
 				render action: 'new'
 			end
 		else

@@ -26,9 +26,9 @@
             <li><%= link_to "Comfort Food", recipes_path(cook: "comfortFood") %></li>
             <li><%= link_to "Grazing", recipes_path(cook: "grazing") %></li>
             <li><%= link_to "Salads", recipes_path(cook: "salads") %></li>
+            <li><%= link_to "On The Side", recipes_path(cook: "onTheSide") %></li>
             <li><%= link_to "Desserts", recipes_path(cook: "desserts") %></li>
             <li class="divider"></li>
-            <!-- <li><a href="#">One more separated link</a></li> -->
           </ul>
         </li>
       </ul>
@@ -36,10 +36,9 @@
         <div class="form-group">
           <%= render :partial => 'layouts/search' %>
         </div>
-        <%= link_to 'Submit', recipes_path, method: 'get', :class =>"btn btn-default" %>
+          <%= link_to 'Submit', recipes_path, method: 'get', :class =>"btn btn-default" %>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <!-- <li><a href="#">My List</a></li> -->
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile options <b class="caret"></b></a>
           <ul class="dropdown-menu">
