@@ -13,18 +13,7 @@ Bundler.require(:default, Rails.env)
 
 module Spoonly
   class Application < Rails::Application
-    config.i18n.enforce_available_locales = true
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
-    config.autoload_paths += %W(#{config.root}/lib)
-    # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
-    # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
-
-    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    
     config.paperclip_defaults = {
       storage: :fog,
       fog_credentials: {
@@ -34,8 +23,20 @@ module Spoonly
       },
       fog_public: true,
       fog_host: ENV['GSTORAGE_HOST'],
-      fog_directory: ENV['GSTORAGE_BUCKET'],
-      path: ':class/:attachment/:id/:style/:filename'
+      fog_directory: ENV['GSTORAGE_BUCKET']
     }
+    config.i18n.enforce_available_locales = true
+    config.autoload_paths += %W(#{config.root}/lib)
+    # Settings in config/environments/* take precedence over those specified here.
+    # Application configuration should go into files in config/initializers
+    # -- all .rb files in that directory are automatically loaded.
+    
+    # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
+    # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
+    # config.time_zone = 'Central Time (US & Canada)'
+
+    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
+    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+    # config.i18n.default_locale = :de
   end
 end

@@ -13,8 +13,8 @@ gem 'aws-sdk'
 
 
 
-gem 'sunspot_rails'
-gem 'sunspot_solr'
+#gem 'sunspot_rails'
+#gem 'sunspot_solr'
 
 gem 'thin'
 # Use SCSS for stylesheets

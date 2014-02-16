@@ -8,6 +8,28 @@ body {
 	text-decoration: none;
 }
 
+body.userEdit {
+	background-image: url(multicolored_painted_spoons.jpg);
+	position: center;
+	background-repeat: no-repeat;
+}
+
+/*body.editPage {
+	background-image: url(love_spoon.jpg);
+	position: center;
+	/*background-repeat: no-repeat;
+}*/
+
+body.homePage {
+	background-image: url(silver_sensations.jpg);
+	position: center;
+	background-repeat: no-repeat;
+}
+
+a {
+	color: #004C66;
+}
+
 a:hover {
 	text-decoration: none;
 }
@@ -42,6 +64,12 @@ a:hover {
 	text-align: center;
 	left: 400px;
 }
+
+#recipe_image {
+	margin: 0 auto;
+	width: 180px;
+}
+
 /* edit/new recipe*/
 
 .text-center {

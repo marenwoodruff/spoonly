@@ -47,5 +47,6 @@
 		<br />
 	<%= link_to 'Back', recipes_path, class: 'backToRecipes' %>
 		<br />
-	<%#= button_to 'Delete', @recipe, method: :delete %>
+	<%= link_to 'Delete', @recipe, method: :delete, data: { confirm: 'This recipe will be deleted forever.  Are you sure you want to delete it?' } %>
+	<br />
 </div>
