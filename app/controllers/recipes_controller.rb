@@ -6,19 +6,19 @@ class RecipesController < ApplicationController
 			@recipes = Recipe.all
 
 		elsif params[:cook] == "comfortFood"
-			@recipes = Recipe.where(category: "Comfort Food")
+			@recipes = Category.find_by(name: "Comfort Food").recipes
 		
 		elsif params[:cook] == "grazing"
-			@recipes = Recipe.where(category: "Grazing")
+			@recipes = Category.find_by(name: "Grazing").recipes
 
 		elsif params[:cook] == "salads"
-			@recipes = Recipe.where(category: "Salads")
+			@recipes = Category.find_by(name: "Salads").recipes
 		
 		elsif params[:cook] == "onTheSide"
-			@recipes = Recipe.where(category: "On The Side")
+			@recipes = Category.find_by(name: "On the Side").recipes
 
 		else params[:cook] == "desserts"
-			@recipes = Recipe.where(category: "Desserts")
+			@recipes = Category.find_by(name: "Desserts").recipes
 		 
 		end
 		
@@ -27,7 +27,7 @@ class RecipesController < ApplicationController
 	end
 
 	def new
-			@recipe = Recipe.new
+		@recipe = Recipe.new
 	end
 
 	def show
@@ -77,6 +77,6 @@ class RecipesController < ApplicationController
 	end
 
 	def recipe_params
-		params.require(:recipe).permit(:title, :author, :category, :description, :image, :ingredient, :body)
+		params.require(:recipe).permit(:title, :author, :category_id, :description, :image, :ingredient, :body)
 	end
 end

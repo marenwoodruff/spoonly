@@ -4,11 +4,11 @@ class Recipe
 
   field :title, type: String
   field :author, type: String
-  field :category, type: String
   field :description, type: String
   field :ingredient, type: String
   field :body, type: String
 
+  belongs_to :category
   
   def self.after_commit(*args, &block)
     args.each do |arg|
@@ -33,7 +33,5 @@ class Recipe
   validates :ingredient, presence: true
   validates :body, presence: true
   validates_attachment_content_type :image,
-   :content_type => /\Aimage\/.*\Z/
-  
-  
+   :content_type => /\Aimage\/.*\Z/  
 end

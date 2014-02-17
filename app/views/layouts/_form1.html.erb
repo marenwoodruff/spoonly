@@ -9,7 +9,7 @@
 		</div>
 
 		<div class="categoryDropdown">
-			<%= f.select :category, options_for_select(['Category', 'Comfort Food', 'Grazing', 'Salads', 'On The Side', 'Desserts']) %>
+			<%= f.collection_select :category_id, Category.all, :id, :name %>
 		</div>
 
 		<div class="field">
