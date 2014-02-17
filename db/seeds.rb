@@ -37,7 +37,7 @@ Recipe.create({
 Recipe.create({
 	title:"Strawberries Drenched in Honeyed Cream",  
 	author: "Martha Hopkins and Randall Lockridge", 
-	category: "Desserts", 
+	category: desserts, 
 	description: "Eat this with your lover. Pair with Champagne.", 
 	ingredient: "~ Fresh Basil Leaves. ~ 1 cup Heavy Whipping Cream. ~ 1/4 cup Water. ~ 1 tablespoon Honey. ~ 1/2 teaspoon Vanilla Bean Paste. ~ 1 pint Ripe Strawberries. ~ 2 bowls. ", 
 	body: "1.) Tear the basil, leave a few whole for garnish. 2.) Set a large, heavy saucepan over medium-high heat and pour in the cream, water and honey. 3.) Bring to a boil, stirring often. Add the torn basil, and reduce the heat to medium-low. 4.) Cook for 20 minutes, or until the cream is thick and pale brown. 5.) Add the vanilla and mix well. 6.) Strain through a fine sieve into a clean saucepan to keep warm. 7.) Slice the strawberries and place them in two bowls. 8.) Spoon with the warm, honeyed cream. Garnish with a few basil leaves."
@@ -91,7 +91,7 @@ Recipe.create({
 Recipe.create({
 	title:"Buttermilk Biscuits", 
 	author: "Suzanne Pirret", 
-	category: desserts,
+	category: comfort_food,
 	description: "Eat them with your fried chicken, or smothered in butter and honey, for breakfast. Or lunch... Or dinner... Drink your favorite red.", 
 	ingredient: "~ 3 tablespoons Butter. ~ 1 cup Self-Rising Flour. ~ Maldons. ~ 1/4 cupe milk ~ Lemon Juice (a squeeze). ", 
 	body: "1.) Rub together cold butter with a cup of flour, and a good pinch of crushed Maldons, using both hands, until crumbly and sandlike. 2.) Add milk mixed with a squeeze of lemon juice, and stir quickly with a fork until just incorporated. 3.) Turn onto the counter and knead gently a few times until the dough is slightly smoother.- you don't want to over mix or over knead, so that they turn out lighter. 4.) Press down gently into a rectangle about an inch thick. 5.) Use a wineglass to cut out three circles. 6.) Remove and flip each over and onto a baking sheet.- throw away scraps. 7.) Bake at 400 degrees for about 15 minutes, until brown and puffy. 8.) Break off the top, jam in a food pat of butter, close, and let it melt right in there."
@@ -132,6 +132,15 @@ Recipe.create({
 	ingredient: "~ 1/2 pound Fresh Green Beans, with the ends trimmed. ~ 1 cup Cashews. ~ 1 medium Shallot, chopped. ~ Vegetable Oil. ~ Sesame Oil. ~ a pinch of Maldons. ", 
 	body: "1.) Roast the cashews in a hot pan (or in the oven) until nicely browned all over. Roughly chop.   2.) In a saute pan, add 2 tablespoons veggie oil and 1 teaspoon sesame oil.   3.) When nice and hot, add the beans and shallots, and stir constantly.   4.) When cooked but still nice and crunchy, add a pinch of Maldons.   5.) Sprinkle with nuts and serve. "
 })
+
+Recipe.create({
+	title: "Roasted Asparagus",
+	author: "Maren Woodruff",
+	category: on_the_side,
+	description: "For 2. Roasted asparagus is an easy and elegant way to add greens to your meal.  The asparagus gets a slightly nutty flavor after roasting.  ",
+	ingredient: "~ 1/2 a bunch of Asparagus. ~ Olive Oil. ~ Maldons. ~ Fresh Lemon Juice.",
+	body: "1.) Preheat your oven to 400 degrees.  2.) Cut the ends off of the asparagus.  You can either keep the spears long, or cut the into smaller pieces.  Your choice.   3.) Put the spears in a bowl, and drizzle olive oil over them as well as a pinch of maldons.   4.) Cook the spears for 8 to 10 minutes, until they are light brown in color.   5.) Squeeze some lemon juice on top before serving."
+	})
 
 Recipe.create({
 	title:"Balsamic Roasted Brussels Sprouts", 
